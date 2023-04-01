@@ -1,7 +1,11 @@
 .button {
     height: fit-content;
     background-color: #725349;
-    padding: 10px 40px;
+    padding: 10px 60px;
     border-radius: 999px;
     border: unset;
+}
+
+.button:hover {
+    background-color: #63473d;
 }
