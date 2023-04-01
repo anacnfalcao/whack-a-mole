@@ -12,7 +12,7 @@ type Props = {
 
 export default function Button({className, style, label, onClick, textClassName, textStyle} : Props) : JSX.Element{
   return (
-    <button  onClick={onClick}  className={[styles.button,, className].join('')} style={style}>
+    <button  onClick={onClick}  className={[styles.button, className].join('')} style={style}>
       <Text label={label} className={textClassName} style={textStyle}/>
     </button>
   )

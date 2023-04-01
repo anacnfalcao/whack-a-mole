@@ -35,8 +35,8 @@ export default function Mole({active} : Props) : JSX.Element{
     </div>
   )
   return (
-    <button  onClick={() => {}}  className={styles.button}>
-      { active ? hole : mole }
-    </button>
+    <div  onClick={() => {}}  className={styles.button}>
+      { active ? mole : hole }
+    </div>
   )
 }
