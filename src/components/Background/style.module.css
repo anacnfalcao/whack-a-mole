@@ -1,0 +1,14 @@
+.background {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+
+    background-image: url('/WAM_bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
