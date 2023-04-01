@@ -20,13 +20,18 @@ export default function Home() {
       <main className={styles.main}>
         <Background>
           <>
-            <Button label='start' onClick={() => {}} />
-            <Text label='hi'></Text>
-            <Mole active={false}></Mole>
-            <Mole active={true}></Mole>
+            <h1>
+              <Text className={styles.title} label='Whack-a-mole'></Text>
+            </h1>
+            <Button label='Start' onClick={() => {}} />
           </>
         </Background>
       </main>
     </>
   )
 }
+
+/*
+ <Mole active={false}></Mole>
+  <Mole active={true}></Mole>
+*/

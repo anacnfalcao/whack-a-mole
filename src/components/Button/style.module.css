@@ -1,11 +1,14 @@
+@value colors: "@/styles/colors.css";
+@value button-color, button-hover from colors;
+
 .button {
     height: fit-content;
-    background-color: #725349;
+    background-color: button-color;
     padding: 10px 60px;
     border-radius: 999px;
     border: unset;
 }
 
 .button:hover {
-    background-color: #63473d;
+    background-color: button-hover;
 }

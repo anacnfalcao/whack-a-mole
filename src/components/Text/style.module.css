@@ -1,4 +1,7 @@
+@value colors: "@/styles/colors.css";
+@value text-color from colors;
+
 .text {
     font-size: 40px;
-    color: white;
+    color: text-color;
 }
