@@ -1,0 +1,37 @@
+.button {
+    height: fit-content;
+    background-color: unset;
+    border: unset;
+}
+
+.moleContainer {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.moleHole{
+    z-index: 999;
+    position: fixed;
+    display: block;
+}
+
+.moleAnimationContainer {
+    height: 63px;
+    overflow: hidden;
+}
+.mole {
+    position: relative;
+    -webkit-animation: floatBubble 2s 0s  normal ease-out;
+    animation: floatBubble 2s 0s  normal ease-out;
+}
+
+@keyframes floatBubble {
+    0% {
+        top: 40px;
+    }
+    100% {
+        top: 0;
+    }
+    
+}
