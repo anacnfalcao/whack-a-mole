@@ -2,24 +2,22 @@ import { createSlice } from "@reduxjs/toolkit";
 import { AppState } from "@/state/store";
 import { HYDRATE } from "next-redux-wrapper";
 
-// Type for our state
-export interface AuthState {
-  authState: boolean;
+export interface GameState {
+  latestScore: number;
 }
 
 // Initial state
-const initialState: AuthState = {
-  authState: false,
+const initialState: GameState = {
+  latestScore: 0,
 };
 
 // Actual Slice
-export const authSlice = createSlice({
-  name: "auth",
+export const gameSlice = createSlice({
+  name: "game",
   initialState,
   reducers: {
-    // Action to set the authentication status
-    setAuthState(state, action) {
-      state.authState = action.payload;
+    setLatestScore(state, action) {
+      state.latestScore += action.payload;
     },
   },
 
@@ -34,8 +32,8 @@ export const authSlice = createSlice({
   },
 });
 
-export const { setAuthState } = authSlice.actions;
+export const { setLatestScore } = gameSlice.actions;
 
-export const selectAuthState = (state: AppState) => state.auth.authState;
+export const selectGameLatestScore = (state: AppState) => state.game.latestScore;
 
-export default authSlice.reducer;
+export default gameSlice.reducer;

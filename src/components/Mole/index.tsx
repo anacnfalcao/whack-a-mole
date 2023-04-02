@@ -3,9 +3,16 @@ import Image from 'next/image'
 
 type Props = {
   active: boolean;
+  increaseScore: Function;
 };
 
-export default function Mole({active} : Props) : JSX.Element{
+export default function Mole({active, increaseScore} : Props) : JSX.Element{
+  let onMoleClicked = () => {
+    if (active) {
+      increaseScore();
+    }
+  }
+
   const hole = (
     <Image
       src='/hole_inactive.png'
@@ -13,9 +20,10 @@ export default function Mole({active} : Props) : JSX.Element{
       width={80}
       height={80}>
     </Image>
-  );
+  )
+
   const mole = (
-    <div className={styles.moleContainer}>
+    <div key={Math.random()} className={styles.moleContainer}>
       <Image
         className={styles.moleHole}
         src='/hole.png'
@@ -34,8 +42,9 @@ export default function Mole({active} : Props) : JSX.Element{
       </div>
     </div>
   )
+
   return (
-    <div  onClick={() => {}}  className={styles.button}>
+    <div  onClick={onMoleClicked}  className={styles.button}>
       { active ? mole : hole }
     </div>
   )

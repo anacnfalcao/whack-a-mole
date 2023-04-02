@@ -23,11 +23,11 @@
 }
 .mole {
     position: relative;
-    -webkit-animation: floatBubble 2s 0s  normal ease-out;
-    animation: floatBubble 2s 0s  normal ease-out;
+    -webkit-animation: goUp 2s 0s  normal ease-out;
+    animation: goUp 2s 0s  normal ease-out;
 }
 
-@keyframes floatBubble {
+@keyframes goUp {
     0% {
         top: 40px;
     }
