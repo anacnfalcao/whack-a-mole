@@ -1,5 +1,7 @@
 # Wack-a-mole
 
+![](game-preview.gif)
+
 This is a simple whack-a-mole game. 
 
 Built with: ReactJS, NextJS, redux and Jest
