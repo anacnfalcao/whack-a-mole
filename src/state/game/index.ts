@@ -17,7 +17,7 @@ export const gameSlice = createSlice({
   initialState,
   reducers: {
     setLatestScore(state, action) {
-      state.latestScore += action.payload;
+      state.latestScore = action.payload;
     },
   },
 

@@ -17,14 +17,15 @@ export default function Game() {
 
   const increaseScore = () => {
     setScore(score + 1)
+    dispatch(setLatestScore(score + 1))
   }
 
   useEffect(() => {
+    
     dispatch(setLatestScore(0))
 
     // end game in 2 min
     setTimeout(() => {
-      dispatch(setLatestScore(score))
       router.push('/scoreboard')
     }, 120000);
     return () => {
@@ -42,7 +43,7 @@ export default function Game() {
       const newTimeout = setTimeout(() => {
         setMolePosition(generateMolePosition())
         continueGeneratingMolePosition();
-      }, 5000);
+      }, 2000);
       setPositionTimeoutID(newTimeout)
     }
 
@@ -52,8 +53,7 @@ export default function Game() {
 
   return (
     <Background>
-      <> 
-        <Text label={'TODO: timer'} />
+      <>
         <h1>
           <Text label={'Score: ' + score} />
         </h1>
