@@ -24,7 +24,7 @@ export default function Game() {
 
     // end game in 2 min
     setTimeout(() => {
-      dispatch(setLatestScore(50))
+      dispatch(setLatestScore(score))
       router.push('/scoreboard')
     }, 120000);
     return () => {
